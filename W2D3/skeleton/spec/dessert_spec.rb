@@ -31,9 +31,10 @@ describe Dessert do
 
 
   describe "#add_ingredient" do
-    before(:each)
+    
     it "adds an ingredient to the ingredients array" do
-      expect(rocky.add_ingredient("cream"))
+      rocky.add_ingredient("cream")
+      expect(rocky.ingredients).to eq(["cream"])
     end
   end
 
@@ -43,12 +44,14 @@ describe Dessert do
 
   describe "#eat" do
     it "subtracts an amount from the quantity"
-
+      rocky.eat(50)
+      expect(rocky.quantity).to eq(50)
     it "raises an error if the amount is greater than the quantity"
   end
 
   describe "#serve" do
     it "contains the titleized version of the chef's name"
+      expect
   end
 
   describe "#make_more" do
