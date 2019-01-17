@@ -24,7 +24,7 @@ describe Dessert do
     end
 
     it "raises an argument error when given a non-integer quantity" do
-      expect {Dessert.new("brownie","tons")}.to raise_error('amount must be a number')
+      expect {Dessert.new("brownie","tons",chef)}.to raise_error(ArgumentError)
     end
   end
 
@@ -44,14 +44,14 @@ describe Dessert do
 
   describe "#eat" do
     it "subtracts an amount from the quantity"
-      rocky.eat(50)
-      expect(rocky.quantity).to eq(50)
+      # rocky.eat(50)
+      # expect(rocky.quantity).to eq(50)
     it "raises an error if the amount is greater than the quantity"
   end
 
   describe "#serve" do
     it "contains the titleized version of the chef's name"
-      expect
+      # expect
   end
 
   describe "#make_more" do
