@@ -1,6 +1,6 @@
 def LRUCache
     attr_reader :array
-    def initialize(size)
+    def initialize(size=4)
         @size = size
         @array = []
     end
@@ -29,3 +29,20 @@ def LRUCache
 
   
 end
+
+lru = LRUCache.new
+lru.add(1)
+lru.add(2)
+lru.show
+lru.count
+lru.add(3)
+lru.show
+lru.add(4)
+lru.show
+lru.count
+lru.add(5)
+lru.add(1)
+lru.show
+lru.count
+lru.add(6)
+lru.count
